@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Vendas</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Padaria Cake & Bread</h1>
+    </header>
+
+    <section class="benefits-section">
+        <h2>Conheça nossos benefícios:</h2>
+        <p>Cartão Ouro com 15% de desconto nas compras à vista no débito.</p>
+        <p>Cartão Prata com 10% de desconto nas compras à vista no débito.</p>
+        <p>Cartão Bronze com 5% de desconto nas compras à vista no débito.</p>
+    </section>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Grid de Benefícios -->
+        <div class="product-card" onclick="showModal(0.90, 'Pão')">
+            <img class="product-image" src="imagens/produto1.jpg" alt="Pão">
+            <h3>Pão</h3>
+            <p>R$ 0,90/unidade</p>
+        </div>
+
+        <div class="product-card" onclick="showModal(52.90, 'Bolo Confeitado')">
+            <img class="product-image" src="imagens/produto2.jpg" alt="Bolo Confeitado">
+            <h3>Bolo Confeitado</h3>
+            <p>R$ 52,90</p>
+        </div>
+
+        <div class="product-card" onclick="showModal(3.00, 'Pão de Mel')">
+            <img class="product-image" src="imagens/produto3.jpg" alt="Pão de Mel">
+            <h3>Pão de Mel</h3>
+            <p>R$ 3,00</p>
+        </div>
+
+        <div class="product-card" onclick="showModal(25.00, 'Pizza')">
+            <img class="product-image" src="imagens/produto4.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>R$ 25,00</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-section-inner">
+                    <h3>Contato</h3>
+                    <p>padariabakebread@gmail.com</p>
+                    <p>Telefone: (32) 4002-8922</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="footer-section-inner">
+                    <h3>Redes Sociais</h3>
+                    <p>Facebook: Padaria Bake & Bread</p>
+                    <p>Instagram: @cake&bread_pad</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="footer-section-inner">
+                    <h3>Endereço</h3>
+                    <p>Rua da Loja, 123</p>
+                    <p>Juiz de Fora, Minas Gerais</p>
+                    <p>CEP: 12345-678</p>
+                </div>
+            </div>
+        </div>
+
+        <p>&copy; 2023 Padaria Cake & Bread</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Desconto Promocional</h2>
+            <p id="discountMessage">Escolha um produto para ver o desconto.</p>
+            <select id="discountSelect">
+                <option value="0">Sem desconto</option>
+                <option value="5">Desconto de 5%</option>
+                <option value="10">Desconto de 10%</option>
+                <option value="15">Desconto de 15%</option>
+            </select>
+            <p id="finalPrice"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
